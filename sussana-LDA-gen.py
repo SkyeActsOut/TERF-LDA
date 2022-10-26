@@ -1,20 +1,11 @@
 #############
 # Skye Kychenthal
 #
-# Sources:
-# https://yanlinc.medium.com/how-to-build-a-lda-topic-model-using-from-text-601cdcbfd3a6
-# https://github.com/explosion/spaCy/issues/3967
-#
-# Fixes used (for future projects)
-# https://stackoverflow.com/questions/52166914/msys2-mingw64-pip-vc-6-0-is-not-supported-by-this-module
-# --> use py -m pip install #package#
+# Based on ./JK-LDA-gen.py
 #
 # NOTE Tweaking of this algorithm will occur in two places
 # one is where gridsearch is done (which finds the best LDA model)
 # and two is in the vectorizer which decides what words will actually be fed into LDA
-
-
-
 
 import time
 import numpy as np
@@ -29,11 +20,13 @@ from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn.model_selection import GridSearchCV
 from pprint import pprint
 
-print('### LOADING JK ROWLING BLOG ###')
+print('### LOADING SUSSANA ARTICLES ###')
 
 # Read the J.K. Rowling data
-f = open("JK-TEXT.txt", "r", encoding='utf8')
-data = f.read()
+f1 = open("./sussana/2020.txt", "r", encoding='utf8')
+f2 = open("./sussana/2021.txt", "r", encoding='utf8')
+f3 = open("./sussana/2022.txt", "r", encoding='utf8')
+data = '' + f1.read() + f2.read() + f3.read()
 
 print('### CLEANING SPEECH ###')
 
@@ -59,19 +52,6 @@ data_words = list(sent_to_words(data.split('.')))
 
 
 # Lemminizes (or truncates each word to it's core parts so "say", "saying", "said" all truncate to "say" )
-
-
-# lemmatization with snowball
-# NOT USED
-# def lemmatization(texts, allowed_postags=['NOUN', 'ADJ', 'VERB', 'ADV']):
-#     texts_out = []
-#     # SnowballStemmer is the library being used to join words instead of spacey which is what the tutorial recommends
-#     # this is primarily to keep TERF, and other acronyms/words not common to normal English discussions haha
-#     stemmer = SnowballStemmer('english')
-#     for sent in texts:
-#         texts_out.append(' '.join(stemmer.stem(token) for token in sent))
-
-#     return texts_out
 
 print('### LOADING SPACY LARGE ###')
 
@@ -194,20 +174,7 @@ df_topic_keywords.columns = ['Word '+str(i)
 df_topic_keywords.index = ['Topic '+str(i)
                            for i in range(df_topic_keywords.shape[0])]
 
-# stylizing the array
-
-
-def color_green(val):
-    color = 'green' if val > .1 else 'black'
-    return 'color: {col}'.format(col=color)
-
-
-def make_bold(val):
-    weight = 700 if val > .1 else 400
-    return 'font-weight: {weight}'.format(weight=weight)
-
-
-name = f'exports/JK_Rowling_Topics_{time.time()}'
+name = f'exports/Sussana_Topics_{time.time()}'
 
 print(f'### DONE! EXPORTING AS: {name}')
 
