@@ -27,6 +27,7 @@ NumPy, Pandas, re, NLTK, spacy, gensim, sci-kit learn, tweepy
 |- JK-LDA-gen.py --> The main model used to test against JK-TEXT.txt 
 |- exports/* --> exported LDA models in .CSV
 |- consolidate --> consolidates twitter .CSV into a .TXT file with all tweets (no QRTs or RTs) 
+|- CleanText.py --> The lemmatization and cleaning process on the text. Separate from model to save time.
 |- pull.py --> pulls tweets from individual Twitter accounts and exports them to ./tweets/ as a .CSV
 |- proposal_LDA
 |    - JK-LDA-gen.py --> Proposal for dissecting JK Rowling's blog post for proposal methodology
