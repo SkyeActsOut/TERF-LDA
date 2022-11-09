@@ -36,4 +36,6 @@ NumPy, Pandas, re, NLTK, spacy, gensim, sci-kit learn, tweepy
 
 ### Methods used
 
-Refer to proposal or final paper for methodology
+Refer to [proposal]() or [final paper] for methodology
+
+Notes taken to document methodology and fine-tuning of LDA can be found in [/notes/](/notes/)

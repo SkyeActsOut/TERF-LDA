@@ -1,0 +1,1032 @@
+{
+    "exports/TERF_LDA_RESULTS_1668018024.8456059": {
+        "vector_settings": {
+            "min_df": 15,
+            "min_length": "3"
+        },
+        "params": {
+            "learning_decay": 0.7,
+            "learning_offset": 25,
+            "max_iter": 3,
+            "n_components": 7
+        },
+        "score": -82387.3135548307,
+        "perplexity": 377.72462697172006
+    },
+    "exports/TERF_LDA_RESULTS_1668020144.547955": {
+        "vector_settings": {
+            "min_df": 15,
+            "min_length": "3"
+        },
+        "params": {
+            "learning_decay": 0.7,
+            "learning_offset": 25,
+            "max_iter": 10,
+            "n_components": 3
+        },
+        "score": -77952.91038185745,
+        "perplexity": 297.25762658543294,
+        "all_settings": {
+            "num_topics": [
+                3,
+                5,
+                7,
+                9
+            ],
+            "decay": [
+                0.7
+            ],
+            "offset": [
+                10,
+                25
+            ],
+            "iter_max": [
+                10
+            ],
+            "batch_size": [
+                128
+            ]
+        }
+    },
+    "exports/TERF_LDA_RESULTS_1668021127.474019": {
+        "vector_settings": {
+            "min_df": 15,
+            "min_length": "3"
+        },
+        "params": {
+            "learning_decay": 0.7,
+            "learning_offset": 50,
+            "max_iter": 15,
+            "n_components": 3
+        },
+        "score": -77191.1757197436,
+        "perplexity": 287.9243155603643,
+        "all_settings": {
+            "num_topics": [
+                3,
+                4,
+                5
+            ],
+            "decay": [
+                0.5,
+                0.7,
+                0.9
+            ],
+            "offset": [
+                5,
+                10,
+                25,
+                50
+            ],
+            "iter_max": [
+                10,
+                15
+            ],
+            "batch_size": [
+                128,
+                256
+            ]
+        },
+        "time_in_mins": 10.812420216666668
+    },
+    "exports/TERF_LDA_RESULTS_1668021738.5448601": {
+        "vector_settings": {
+            "min_df": 10,
+            "min_length": "4"
+        },
+        "params": {
+            "learning_decay": 0.7,
+            "learning_offset": 65,
+            "max_iter": 20,
+            "n_components": 3
+        },
+        "score": -74756.29041830287,
+        "perplexity": 346.09048794777624,
+        "all_settings": {
+            "num_topics": [
+                3,
+                4
+            ],
+            "decay": [
+                0.7
+            ],
+            "offset": [
+                25,
+                40,
+                65
+            ],
+            "iter_max": [
+                10,
+                15,
+                20
+            ],
+            "batch_size": [
+                128
+            ]
+        },
+        "time_in_mins": 3.4076332500000004
+    },
+    "exports/TERF_LDA_RESULTS_1668023137.914373": {
+        "vector_settings": {
+            "min_df": 6,
+            "min_length": "4"
+        },
+        "params": {
+            "learning_decay": 0.8,
+            "learning_offset": 70,
+            "max_iter": 20,
+            "n_components": 3
+        },
+        "score": -82142.26049525198,
+        "perplexity": 432.5875354910831,
+        "all_settings": {
+            "num_topics": [
+                3
+            ],
+            "decay": [
+                0.6,
+                0.65,
+                0.7,
+                0.75,
+                0.8
+            ],
+            "offset": [
+                50,
+                55,
+                60,
+                65,
+                70
+            ],
+            "iter_max": [
+                10,
+                15,
+                20
+            ],
+            "batch_size": [
+                128
+            ]
+        },
+        "time_in_mins": 12.323461233333335
+    },
+    "exports/TERF_LDA_RESULTS_1668024006.029969": {
+        "vector_settings": {
+            "min_df": 10,
+            "min_length": "4"
+        },
+        "params": {
+            "learning_decay": 0.8,
+            "learning_offset": 110,
+            "max_iter": 30,
+            "n_components": 4
+        },
+        "score": -74265.94201996365,
+        "perplexity": 322.5359747317511,
+        "all_settings": {
+            "num_topics": [
+                3,
+                4
+            ],
+            "decay": [
+                0.78,
+                0.8,
+                0.82
+            ],
+            "offset": [
+                70,
+                90,
+                110
+            ],
+            "iter_max": [
+                20,
+                25,
+                30
+            ],
+            "batch_size": [
+                64
+            ]
+        },
+        "time_in_mins": 11.74561785
+    },
+    "exports/TERF_LDA_RESULTS_1668026715.9470572": {
+        "vector_settings": {
+            "min_df": 10,
+            "min_length": "4"
+        },
+        "params": {
+            "learning_decay": 0.8,
+            "learning_offset": 140,
+            "max_iter": 100,
+            "n_components": 4
+        },
+        "score": -73784.11991462395,
+        "perplexity": 310.24469989369356,
+        "all_settings": {
+            "num_topics": [
+                3,
+                4,
+                5
+            ],
+            "decay": [
+                0.8
+            ],
+            "offset": [
+                105,
+                110,
+                120,
+                130,
+                140
+            ],
+            "iter_max": [
+                30,
+                40,
+                60,
+                80,
+                100
+            ],
+            "batch_size": [
+                128
+            ]
+        },
+        "time_in_mins": 40.597480600000004
+    },
+    "exports/TERF_LDA_RESULTS_1668028872.6883152": {
+        "vector_settings": {
+            "min_df": 10,
+            "min_length": "4"
+        },
+        "params": {
+            "learning_decay": 0.8,
+            "learning_offset": 140,
+            "max_iter": 260,
+            "n_components": 4
+        },
+        "score": -73718.82951041574,
+        "perplexity": 308.87103117004233,
+        "all_settings": {
+            "num_topics": [
+                4
+            ],
+            "decay": [
+                0.8
+            ],
+            "offset": [
+                140,
+                180,
+                240
+            ],
+            "iter_max": [
+                100,
+                180,
+                260
+            ],
+            "batch_size": [
+                64
+            ]
+        },
+        "time_in_mins": 18.572119750000002
+    },
+    "exports/TERF_LDA_RESULTS_1668029885.3326108": {
+        "vector_settings": {
+            "min_df": 10,
+            "min_length": "4"
+        },
+        "params": {
+            "batch_size": 64,
+            "learning_decay": 0.8,
+            "learning_offset": 150,
+            "max_iter": 10,
+            "n_components": 4
+        },
+        "score": -75097.89275959122,
+        "perplexity": 347.26701359616857,
+        "all_settings": {
+            "num_topics": [
+                4
+            ],
+            "decay": [
+                0.8
+            ],
+            "offset": [
+                130,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                150
+            ],
+            "iter_max": [
+                10
+            ],
+            "batch_size": [
+                64
+            ]
+        },
+        "time_in_mins": 1.3254858333333333
+    },
+    "exports/TERF_LDA_RESULTS_1668029982.4287434": {
+        "vector_settings": {
+            "min_df": 12,
+            "min_length": "4"
+        },
+        "params": {
+            "batch_size": 64,
+            "learning_decay": 0.8,
+            "learning_offset": 150,
+            "max_iter": 10,
+            "n_components": 4
+        },
+        "score": -72505.14612974324,
+        "perplexity": 306.24810325712605,
+        "all_settings": {
+            "num_topics": [
+                4
+            ],
+            "decay": [
+                0.8
+            ],
+            "offset": [
+                150
+            ],
+            "iter_max": [
+                10
+            ],
+            "batch_size": [
+                64
+            ]
+        },
+        "time_in_mins": 0.3028422333333333
+    },
+    "exports/TERF_LDA_RESULTS_1668030013.0552487": {
+        "vector_settings": {
+            "min_df": 13,
+            "min_length": "4"
+        },
+        "params": {
+            "batch_size": 64,
+            "learning_decay": 0.8,
+            "learning_offset": 150,
+            "max_iter": 10,
+            "n_components": 4
+        },
+        "score": -72124.66899186543,
+        "perplexity": 310.19289540341686,
+        "all_settings": {
+            "num_topics": [
+                4
+            ],
+            "decay": [
+                0.8
+            ],
+            "offset": [
+                150
+            ],
+            "iter_max": [
+                10
+            ],
+            "batch_size": [
+                64
+            ]
+        },
+        "time_in_mins": 0.32571296666666666
+    },
+    "exports/TERF_LDA_RESULTS_1668030060.589762": {
+        "vector_settings": {
+            "min_df": 15,
+            "min_length": "4"
+        },
+        "params": {
+            "batch_size": 64,
+            "learning_decay": 0.8,
+            "learning_offset": 150,
+            "max_iter": 10,
+            "n_components": 4
+        },
+        "score": -69945.42015567442,
+        "perplexity": 282.2072695307852,
+        "all_settings": {
+            "num_topics": [
+                4
+            ],
+            "decay": [
+                0.8
+            ],
+            "offset": [
+                150
+            ],
+            "iter_max": [
+                10
+            ],
+            "batch_size": [
+                64
+            ]
+        },
+        "time_in_mins": 0.30206968333333334
+    },
+    "exports/TERF_LDA_RESULTS_1668030090.8311195": {
+        "vector_settings": {
+            "min_df": 20,
+            "min_length": "3"
+        },
+        "params": {
+            "batch_size": 64,
+            "learning_decay": 0.8,
+            "learning_offset": 150,
+            "max_iter": 10,
+            "n_components": 4
+        },
+        "score": -72174.82469910396,
+        "perplexity": 230.4489816247053,
+        "all_settings": {
+            "num_topics": [
+                4
+            ],
+            "decay": [
+                0.8
+            ],
+            "offset": [
+                150
+            ],
+            "iter_max": [
+                10
+            ],
+            "batch_size": [
+                64
+            ]
+        },
+        "time_in_mins": 0.30471945
+    },
+    "exports/TERF_LDA_RESULTS_1668030128.2226505": {
+        "vector_settings": {
+            "min_df": 15,
+            "min_length": "3"
+        },
+        "params": {
+            "batch_size": 64,
+            "learning_decay": 0.8,
+            "learning_offset": 150,
+            "max_iter": 10,
+            "n_components": 4
+        },
+        "score": -78012.1947566168,
+        "perplexity": 276.6394916238675,
+        "all_settings": {
+            "num_topics": [
+                4
+            ],
+            "decay": [
+                0.8
+            ],
+            "offset": [
+                150
+            ],
+            "iter_max": [
+                10
+            ],
+            "batch_size": [
+                64
+            ]
+        },
+        "time_in_mins": 0.32607061666666665
+    },
+    "exports/TERF_LDA_RESULTS_1668030318.730267": {
+        "vector_settings": {
+            "min_df": 15,
+            "min_length": "4"
+        },
+        "params": {
+            "batch_size": 64,
+            "learning_decay": 0.8,
+            "learning_offset": 150,
+            "max_iter": 10,
+            "n_components": 4
+        },
+        "score": -69945.42015567442,
+        "perplexity": 282.2072695307852,
+        "all_settings": {
+            "num_topics": [
+                4
+            ],
+            "decay": [
+                0.8
+            ],
+            "offset": [
+                140,
+                150,
+                160
+            ],
+            "iter_max": [
+                10
+            ],
+            "batch_size": [
+                64
+            ]
+        },
+        "time_in_mins": 0.6145236833333333
+    },
+    "exports/TERF_LDA_RESULTS_1668030377.017128": {
+        "vector_settings": {
+            "min_df": 15,
+            "min_length": "4"
+        },
+        "params": {
+            "batch_size": 64,
+            "learning_decay": 0.8,
+            "learning_offset": 152,
+            "max_iter": 10,
+            "n_components": 4
+        },
+        "score": -69645.1926229923,
+        "perplexity": 282.152682466444,
+        "all_settings": {
+            "num_topics": [
+                4
+            ],
+            "decay": [
+                0.8
+            ],
+            "offset": [
+                148,
+                150,
+                152
+            ],
+            "iter_max": [
+                10
+            ],
+            "batch_size": [
+                64
+            ]
+        },
+        "time_in_mins": 0.5451522166666667
+    },
+    "exports/TERF_LDA_RESULTS_1668030478.7823315": {
+        "vector_settings": {
+            "min_df": 15,
+            "min_length": "4"
+        },
+        "params": {
+            "batch_size": 64,
+            "learning_decay": 0.8,
+            "learning_offset": 152,
+            "max_iter": 10,
+            "n_components": 4
+        },
+        "score": -69645.1926229923,
+        "perplexity": 282.152682466444,
+        "all_settings": {
+            "num_topics": [
+                4
+            ],
+            "decay": [
+                0.8
+            ],
+            "offset": [
+                151,
+                152,
+                154
+            ],
+            "iter_max": [
+                10
+            ],
+            "batch_size": [
+                64
+            ]
+        },
+        "time_in_mins": 0.5677730166666667
+    },
+    "exports/TERF_LDA_RESULTS_1668030594.8616064": {
+        "vector_settings": {
+            "min_df": 15,
+            "min_length": "4"
+        },
+        "params": {
+            "batch_size": 64,
+            "learning_decay": 0.8,
+            "learning_offset": 152,
+            "max_iter": 10,
+            "n_components": 4
+        },
+        "score": -69645.1926229923,
+        "perplexity": 282.152682466444,
+        "all_settings": {
+            "num_topics": [
+                4
+            ],
+            "decay": [
+                0.79,
+                0.8,
+                0.81
+            ],
+            "offset": [
+                151,
+                152,
+                153
+            ],
+            "iter_max": [
+                10
+            ],
+            "batch_size": [
+                64
+            ]
+        },
+        "time_in_mins": 1.3066440166666666
+    },
+    "exports/TERF_LDA_RESULTS_1668030728.780162": {
+        "vector_settings": {
+            "min_df": 15,
+            "min_length": "4"
+        },
+        "params": {
+            "batch_size": 64,
+            "learning_decay": 0.8,
+            "learning_offset": 152,
+            "max_iter": 10,
+            "n_components": 2
+        },
+        "score": -69078.98879070103,
+        "perplexity": 311.1262325595639,
+        "all_settings": {
+            "num_topics": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+            ],
+            "decay": [
+                0.8
+            ],
+            "offset": [
+                152
+            ],
+            "iter_max": [
+                10
+            ],
+            "batch_size": [
+                64
+            ]
+        },
+        "time_in_mins": 0.9034019333333333
+    },
+    "exports/TERF_LDA_RESULTS_1668030816.764302": {
+        "vector_settings": {
+            "min_df": 15,
+            "min_length": "4"
+        },
+        "params": {
+            "batch_size": 64,
+            "learning_decay": 0.8,
+            "learning_offset": 152,
+            "max_iter": 10,
+            "n_components": 3
+        },
+        "score": -69172.7621774653,
+        "perplexity": 293.72222033858037,
+        "all_settings": {
+            "num_topics": [
+                3,
+                4,
+                5
+            ],
+            "decay": [
+                0.8
+            ],
+            "offset": [
+                152
+            ],
+            "iter_max": [
+                10
+            ],
+            "batch_size": [
+                64
+            ]
+        },
+        "time_in_mins": 0.5472487
+    },
+    "exports/TERF_LDA_RESULTS_1668030982.2782373": {
+        "vector_settings": {
+            "min_df": 15,
+            "min_length": "4"
+        },
+        "params": {
+            "batch_size": 64,
+            "learning_decay": 0.8,
+            "learning_offset": 132,
+            "max_iter": 10,
+            "n_components": 8
+        },
+        "score": -70008.40481112435,
+        "perplexity": 260.3633374259359,
+        "all_settings": {
+            "num_topics": [
+                8,
+                10,
+                12
+            ],
+            "decay": [
+                0.8
+            ],
+            "offset": [
+                132,
+                142,
+                152
+            ],
+            "iter_max": [
+                10
+            ],
+            "batch_size": [
+                64
+            ]
+        },
+        "time_in_mins": 1.4128125500000002
+    },
+    "exports/TERF_LDA_RESULTS_1668031195.4181411": {
+        "vector_settings": {
+            "min_df": 10,
+            "min_length": "4"
+        },
+        "params": {
+            "batch_size": 64,
+            "learning_decay": 0.8,
+            "learning_offset": 125,
+            "max_iter": 10,
+            "n_components": 8
+        },
+        "score": -77331.53405909889,
+        "perplexity": 339.480380439936,
+        "all_settings": {
+            "num_topics": [
+                8,
+                12,
+                16
+            ],
+            "decay": [
+                0.8
+            ],
+            "offset": [
+                25,
+                50,
+                100,
+                125
+            ],
+            "iter_max": [
+                10
+            ],
+            "batch_size": [
+                64
+            ]
+        },
+        "time_in_mins": 1.9118175166666667
+    },
+    "exports/TERF_LDA_RESULTS_1668031308.697157": {
+        "vector_settings": {
+            "min_df": 15,
+            "min_length": "4"
+        },
+        "params": {
+            "batch_size": 64,
+            "learning_decay": 0.8,
+            "learning_offset": 125,
+            "max_iter": 10,
+            "n_components": 12
+        },
+        "score": -70724.5509607807,
+        "perplexity": 291.1501605803852,
+        "all_settings": {
+            "num_topics": [
+                12
+            ],
+            "decay": [
+                0.8
+            ],
+            "offset": [
+                25,
+                50,
+                100,
+                125
+            ],
+            "iter_max": [
+                10
+            ],
+            "batch_size": [
+                64
+            ]
+        },
+        "time_in_mins": 0.783652
+    },
+    "exports/TERF_LDA_RESULTS_1668031424.918275": {
+        "vector_settings": {
+            "min_df": 15,
+            "min_length": "4"
+        },
+        "params": {
+            "batch_size": 64,
+            "learning_decay": 0.8,
+            "learning_offset": 130,
+            "max_iter": 10,
+            "n_components": 8
+        },
+        "score": -69863.78887452823,
+        "perplexity": 258.53130040343405,
+        "all_settings": {
+            "num_topics": [
+                8
+            ],
+            "decay": [
+                0.8
+            ],
+            "offset": [
+                100,
+                115,
+                120,
+                125,
+                130,
+                135
+            ],
+            "iter_max": [
+                10
+            ],
+            "batch_size": [
+                64
+            ]
+        },
+        "time_in_mins": 1.0931235666666665
+    },
+    "exports/TERF_LDA_RESULTS_1668031662.3103945": {
+        "vector_settings": {
+            "min_df": 15,
+            "min_length": "4"
+        },
+        "params": {
+            "batch_size": 64,
+            "learning_decay": 0.8,
+            "learning_offset": 130,
+            "max_iter": 10,
+            "n_components": 8
+        },
+        "score": -69863.78887452823,
+        "perplexity": 258.53130040343405,
+        "all_settings": {
+            "num_topics": [
+                8
+            ],
+            "decay": [
+                0.75,
+                0.78,
+                0.8,
+                0.82
+            ],
+            "offset": [
+                128,
+                130,
+                132
+            ],
+            "iter_max": [
+                10
+            ],
+            "batch_size": [
+                64
+            ]
+        },
+        "time_in_mins": 1.9753685666666667
+    },
+    "exports/TERF_LDA_RESULTS_1668031890.863837": {
+        "vector_settings": {
+            "min_df": 15,
+            "min_length": "4"
+        },
+        "params": {
+            "batch_size": 256,
+            "learning_decay": 0.8,
+            "learning_offset": 152,
+            "max_iter": 100,
+            "n_components": 4
+        },
+        "score": -67150.48056198357,
+        "perplexity": 247.97691926727754,
+        "all_settings": {
+            "num_topics": [
+                4
+            ],
+            "decay": [
+                0.8
+            ],
+            "offset": [
+                152
+            ],
+            "iter_max": [
+                100
+            ],
+            "batch_size": [
+                256
+            ]
+        },
+        "time_in_mins": 2.2247563
+    },
+    "exports/TERF_LDA_RESULTS_1668032914.5621092": {
+        "vector_settings": {
+            "min_df": 15,
+            "min_length": "4"
+        },
+        "params": {
+            "batch_size": 1024,
+            "learning_decay": 0.8,
+            "learning_offset": 152,
+            "max_iter": 1000,
+            "n_components": 4
+        },
+        "score": -67673.85384556503,
+        "perplexity": 272.3491470309902,
+        "all_settings": {
+            "num_topics": [
+                4
+            ],
+            "decay": [
+                0.8
+            ],
+            "offset": [
+                152
+            ],
+            "iter_max": [
+                1000
+            ],
+            "batch_size": [
+                1024
+            ]
+        },
+        "time_in_mins": 16.069437383333334
+    },
+    "exports/TERF_LDA_RESULTS_1668033309.2199886": {
+        "vector_settings": {
+            "min_df": 15,
+            "min_length": "4"
+        },
+        "params": {
+            "batch_size": 256,
+            "learning_decay": 0.8,
+            "learning_offset": 130,
+            "max_iter": 100,
+            "n_components": 8
+        },
+        "score": -67975.1826661294,
+        "perplexity": 235.09598673862106,
+        "all_settings": {
+            "num_topics": [
+                8
+            ],
+            "decay": [
+                0.8
+            ],
+            "offset": [
+                130
+            ],
+            "iter_max": [
+                100
+            ],
+            "batch_size": [
+                256
+            ]
+        },
+        "time_in_mins": 1.6617508833333334
+    },
+    "exports/TERF_LDA_RESULTS_1668033804.8448658": {
+        "vector_settings": {
+            "min_df": 15,
+            "min_length": "4"
+        },
+        "params": {
+            "batch_size": 256,
+            "learning_decay": 0.8,
+            "learning_offset": 100,
+            "max_iter": 100,
+            "n_components": 12
+        },
+        "score": -68008.22301347698,
+        "perplexity": 223.50337781606532,
+        "all_settings": {
+            "num_topics": [
+                12
+            ],
+            "decay": [
+                0.8
+            ],
+            "offset": [
+                100,
+                115,
+                120,
+                125,
+                130
+            ],
+            "iter_max": [
+                100
+            ],
+            "batch_size": [
+                256
+            ]
+        },
+        "time_in_mins": 4.626431166666666
+    }
+}

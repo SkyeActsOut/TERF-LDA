@@ -14,7 +14,10 @@
 # and two is in the vectorizer which decides what words will actually be fed into LDA
 
 
-import time
+import time, datetime
+
+_t_start = datetime.datetime.now()
+
 import json
 import numpy as np
 import pandas as pd
@@ -36,7 +39,7 @@ print('### VECTORIZING DATA ###')
 vector_settings = {
 
     "min_df": 15,
-    "min_length": "3"
+    "min_length": "4"
 
 }
 
@@ -57,43 +60,77 @@ print('### RUNNING GRIDSEARCH TO FIND BEST LDA ###')
 
 # FIND THE BEST FIT LDA MODEL
 # USING COMBINATIONS OF ALL FOLLOWING VARIABLES
-num_topics = [5]
-decay = [0.5, 0.7, 0.9]
-offset = [25]
-iter_max = [3]
+num_topics = [12]
+decay = [0.8]
+"""
+learning_decay : float, default=0.7
+It is a parameter that control learning rate in the online learning
+method. The value should be set between (0.5, 1.0] to guarantee
+asymptotic convergence. When the value is 0.0 and batch_size is
+``n_samples``, the update method is same as batch learning. In the
+literature, this is called kappa.
+https://github.com/scikit-learn/scikit-learn/blob/main/sklearn/decomposition/_lda.py
+"""
+
+offset = [100, 115, 120, 125, 130]
+""" 
+learning_offset : float, default=10.0
+A (positive) parameter that downweights early iterations in online
+learning.  It should be greater than 1.0. In the literature, this is
+called tau_0.
+"""
+
+iter_max = [100]
+"""
+max_iter : int, default=10
+The maximum number of passes over the training data (aka epochs).
+It only impacts the behavior in the :meth:`fit` method, and not the
+:meth:`partial_fit` method.
+"""
+
+batch_size=[256]
+""" 
+batch_size : int, default=128
+Number of documents to use in each EM iteration. Only used in online
+learning.
+"""
+
+all_params = {
+
+    "num_topics": num_topics,
+    "decay": decay,
+    "offset": offset,
+    "iter_max": iter_max,
+    "batch_size": batch_size
+
+}
+
+# amount of iterations needed to be done
+# n_of_runs = 0
+# for i in list(all_params.values()):
+#     for j in i:
+#         n_of_runs += 1
+# n_of_runs = n_of_runs**4
+# print (f"{n_of_runs} RUNS")        
 
 search_params = {'n_components': num_topics,
                  'learning_decay': decay,
                  'learning_offset': offset,
-                 'max_iter': iter_max}  # Init the Model
-lda = LatentDirichletAllocation(max_iter=5, learning_method='online',
-                                learning_offset=50., random_state=0)  # Init Grid Search Class
-model = GridSearchCV(lda, param_grid=search_params)  # Do the Grid Search
+                 'max_iter': iter_max,
+                 'batch_size': batch_size}  # Init the Model
+lda = LatentDirichletAllocation(learning_method='online', random_state=0)  # Init Grid Search Class
+model = GridSearchCV(lda, param_grid=search_params, verbose=2, n_jobs=5)  # Do the Grid Search
 model.fit(data_vectorized)
-GridSearchCV(cv=None, error_score='raise',
-             estimator=LatentDirichletAllocation(batch_size=128, doc_topic_prior=None,
-                                                 evaluate_every=-1, learning_decay=0.7, learning_method=None,
-                                                 learning_offset=10.0, max_doc_update_iter=100, max_iter=15,
-                                                 mean_change_tol=0.001, n_components=5, n_jobs=1, perp_tol=0.1, random_state=None,
-                                                 topic_word_prior=None, total_samples=1000000.0),
-             n_jobs=1,
-             param_grid={'n_topics': num_topics,
-                         'learning_decay': decay,
-                         'learning_offset': offset,
-                         'max_iter': iter_max},
-             pre_dispatch='2*n_jobs', refit=True, return_train_score='warn',
-             scoring=None)
 
 best_lda_model = model.best_estimator_
-# print("Best Model's Params: ", model.best_params_)  # lower better
-# print("Best Log Likelihood Score: ", model.best_score_)  # higher better
-# print("Model Perplexity: ", best_lda_model.perplexity(data_vectorized))
 
+# Higher score, lower perplexity is good
 fin_settings = { 
                  "vector_settings": vector_settings,
                  "params": model.best_params_,
                  "score": model.best_score_,
-                 "perplexity": best_lda_model.perplexity(data_vectorized)
+                 "perplexity": best_lda_model.perplexity(data_vectorized),
+                 "all_settings": all_params
                 }
 print (fin_settings)
 
@@ -130,26 +167,25 @@ df_topic_keywords.columns = ['Word '+str(i)
 df_topic_keywords.index = ['Topic '+str(i)
                            for i in range(df_topic_keywords.shape[0])]
 
-# stylizing the array
-
-
-def color_green(val):
-    color = 'green' if val > .1 else 'black'
-    return 'color: {col}'.format(col=color)
-
-
-def make_bold(val):
-    weight = 700 if val > .1 else 400
-    return 'font-weight: {weight}'.format(weight=weight)
-
-
 name1 = f'exports/TERF_LDA_RESULTS_{time.time()}'
-name2 = f'exports/TERF_LDA_SETTINGS_{time.time()}'
 
 print(f'### DONE! EXPORTING AS: {name1}')
+
+_t_est = datetime.datetime.now() - _t_start
+fin_settings['time_in_mins'] = _t_est.total_seconds()/60
+# fin_settings['num_runs'] = n_of_runs
+
+# fin_settings['csv'] = df_topic_keywords.to_json()
 
 # exports a topics.csv file to ./exports/ with the variables for the number of topics
 df_topic_keywords.to_csv(f'{name1}.csv')
 
-with open(name2, "w") as outfile:
-    outfile.write(json.dumps( fin_settings, indent=4 ))
+with open("ALL_SETTINGS.json", "r+") as outfile:
+
+    f = json.load (outfile)
+
+    f[name1] = fin_settings
+
+    outfile.seek(0)
+
+    json.dump( f, outfile, indent=4 )
