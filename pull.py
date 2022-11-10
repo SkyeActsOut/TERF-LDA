@@ -1,14 +1,16 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-#### ####
-# Based off of
-# https://gist.githubusercontent.com/yanofsky/5436496/raw/0ea704bef4246e1c26067a05a0a28fb783e875a4/tweet_dumper.py
-#
-# with REGEX code from
-# https://gist.github.com/slowkow/7a7f61f495e3dbb7e3d767f97bd7304b
-# https://stackoverflow.com/questions/11331982/how-to-remove-any-url-within-a-string-in-python
-########
+"""
+
+NOTE Based off of
+     https://gist.githubusercontent.com/yanofsky/5436496/raw/0ea704bef4246e1c26067a05a0a28fb783e875a4/tweet_dumper.py
+
+NOTE With REGEX code from
+     https://gist.github.com/slowkow/7a7f61f495e3dbb7e3d767f97bd7304b
+     https://stackoverflow.com/questions/11331982/how-to-remove-any-url-within-a-string-in-python
+
+"""
 
 import tweepy
 import csv

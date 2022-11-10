@@ -1,18 +1,18 @@
-#############
-# Skye Kychenthal
-#
-# Sources:
-# https://yanlinc.medium.com/how-to-build-a-lda-topic-model-using-from-text-601cdcbfd3a6
-# https://github.com/explosion/spaCy/issues/3967
-#
-# Fixes used (for future projects)
-# https://stackoverflow.com/questions/52166914/msys2-mingw64-pip-vc-6-0-is-not-supported-by-this-module
-# --> use py -m pip install #package#
-#
-# NOTE Tweaking of this algorithm will occur in two places
-# one is where gridsearch is done (which finds the best LDA model)
-# and two is in the vectorizer which decides what words will actually be fed into LDA
+"""
+AUTHOR: Skye Kychenthal
 
+NOTE Sources:
+     https://yanlinc.medium.com/how-to-build-a-lda-topic-model-using-from-text-601cdcbfd3a6
+     https://github.com/explosion/spaCy/issues/3967
+
+NOTE Fixes used (for future projects)
+     https://stackoverflow.com/questions/52166914/msys2-mingw64-pip-vc-6-0-is-not-supported-by-this-module
+     --> use py -m pip install #package#
+
+NOTE Tweaking of this algorithm will occur in two places
+     one is where gridsearch is done (which finds the best LDA model)
+     and two is in the vectorizer which decides what words will actually be fed into LDA
+"""
 
 import time, datetime
 
@@ -63,6 +63,7 @@ print('### RUNNING GRIDSEARCH TO FIND BEST LDA ###')
 num_topics = [12]
 decay = [0.8]
 """
+NOTE
 learning_decay : float, default=0.7
 It is a parameter that control learning rate in the online learning
 method. The value should be set between (0.5, 1.0] to guarantee
@@ -74,6 +75,7 @@ https://github.com/scikit-learn/scikit-learn/blob/main/sklearn/decomposition/_ld
 
 offset = [100, 115, 120, 125, 130]
 """ 
+NOTE
 learning_offset : float, default=10.0
 A (positive) parameter that downweights early iterations in online
 learning.  It should be greater than 1.0. In the literature, this is
@@ -82,6 +84,7 @@ called tau_0.
 
 iter_max = [100]
 """
+NOTE
 max_iter : int, default=10
 The maximum number of passes over the training data (aka epochs).
 It only impacts the behavior in the :meth:`fit` method, and not the
@@ -90,6 +93,7 @@ It only impacts the behavior in the :meth:`fit` method, and not the
 
 batch_size=[256]
 """ 
+NOTE
 batch_size : int, default=128
 Number of documents to use in each EM iteration. Only used in online
 learning.
@@ -103,15 +107,7 @@ all_params = {
     "iter_max": iter_max,
     "batch_size": batch_size
 
-}
-
-# amount of iterations needed to be done
-# n_of_runs = 0
-# for i in list(all_params.values()):
-#     for j in i:
-#         n_of_runs += 1
-# n_of_runs = n_of_runs**4
-# print (f"{n_of_runs} RUNS")        
+} 
 
 search_params = {'n_components': num_topics,
                  'learning_decay': decay,

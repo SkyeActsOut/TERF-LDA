@@ -1,5 +1,6 @@
 import csv
 
+# For turning the CSV data into a readable file (mostly b/c of errors... oops)
 class CSV_Data:
 
     def __init__(self, f_name='clean_text_dirty.csv'):
