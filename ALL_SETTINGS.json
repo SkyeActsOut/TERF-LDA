@@ -1028,5 +1028,38 @@
             ]
         },
         "time_in_mins": 4.626431166666666
+    },
+    "exports/TERF_LDA_RESULTS_1668123536.3682024": {
+        "vector_settings": {
+            "min_df": 15,
+            "min_length": "4"
+        },
+        "params": {
+            "batch_size": 256,
+            "learning_decay": 0.8,
+            "learning_offset": 152,
+            "max_iter": 100,
+            "n_components": 4
+        },
+        "score": -67150.48056198357,
+        "perplexity": 247.97691926727754,
+        "all_settings": {
+            "num_topics": [
+                4
+            ],
+            "decay": [
+                0.8
+            ],
+            "offset": [
+                152
+            ],
+            "iter_max": [
+                100
+            ],
+            "batch_size": [
+                256
+            ]
+        },
+        "time_in_mins": 3.0148001
     }
 }

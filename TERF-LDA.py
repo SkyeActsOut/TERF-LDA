@@ -21,6 +21,7 @@ _t_start = datetime.datetime.now()
 import json
 import numpy as np
 import pandas as pd
+import pickle
 
 from CleanCSV import CSV_Data
 
@@ -60,7 +61,7 @@ print('### RUNNING GRIDSEARCH TO FIND BEST LDA ###')
 
 # FIND THE BEST FIT LDA MODEL
 # USING COMBINATIONS OF ALL FOLLOWING VARIABLES
-num_topics = [12]
+num_topics = [4]
 decay = [0.8]
 """
 NOTE
@@ -73,7 +74,7 @@ literature, this is called kappa.
 https://github.com/scikit-learn/scikit-learn/blob/main/sklearn/decomposition/_lda.py
 """
 
-offset = [100, 115, 120, 125, 130]
+offset = [152]
 """ 
 NOTE
 learning_offset : float, default=10.0
@@ -175,6 +176,9 @@ fin_settings['time_in_mins'] = _t_est.total_seconds()/60
 
 # exports a topics.csv file to ./exports/ with the variables for the number of topics
 df_topic_keywords.to_csv(f'{name1}.csv')
+
+with open('./broad_model.pk1', 'wb') as file:
+    pickle.dump(best_lda_model, file)
 
 with open("ALL_SETTINGS.json", "r+") as outfile:
 
